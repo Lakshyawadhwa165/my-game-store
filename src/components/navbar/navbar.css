@@ -1,0 +1,85 @@
+.Navbar{
+    background-color: #131921;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.navbar_logo{
+    object-fit: contain;
+    width: 100px;
+    margin: 0 20px 20px 10px;
+    margin-top: 18px;
+}
+.navbar_search{
+    display: flex;
+    flex: 1;
+    
+}
+.navbar_input{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.navbar_searchIcon{
+    background-color: orange;
+    height: 22px !important;
+    padding: 5px;
+}
+.navbar_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+}
+.navbar_links{
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    text-decoration: none;
+
+
+
+}
+.nav_opt{
+    color: white;
+    font-size: 8px;
+    display: flex;
+    padding: 10px;
+    
+    flex-direction: column;
+
+}
+h4{
+    font-weight: 800;
+    
+
+}
+h2{
+    font-weight: 800;
+}
+.navbar_checkoutIcon{
+
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav_checkout_Icon{
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+.checkout_value{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right:3px ;
+    
+}
