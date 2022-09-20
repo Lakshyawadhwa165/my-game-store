@@ -1,49 +1,87 @@
-
 import React from 'react';
 import './App.css';
-// import {BrowserRouter,  Routes,Route , Link } from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Checkout from './components/checkout/Checkout';
+import Login from './components/authen/Login';
+import Register from './components/authen/Register';
+import Dashboard from './components/authen/Dashboard';
+// import {useStateValue} from './components/stateprovider/StateProvider';
+// import {auth} from "./firebase";
 
 function App() {
+  // const [{user},dispatch] = useStateValue();
+  // piece of code that runs in a given cond.
+  // useEffect(() => {
+  //     const unsubscribe = auth.onAuthStateChanged((authUser) =>{
+  //       if (authUser){
+  //         dispatch ({
+  //           type: "SET_USER",
+  //           user: authUser
+  //         });
+
+  //       } else {
+  //           dispatch({
+  //             type: "SET_USER",
+  //             user: null
+  //           });
+  //       }
+
+  //     });
+  //     return () =>{
+  //       unsubscribe();
+  //     }
+
+  //    }, []);
+  //    console.log(user);
+  
+
+
   return (
         <div className='App'>
-          <>
-            <Navbar/>
-            <Home/>
-            <Checkout/>
-          </>
+          <Routes>
+            
+             <Route path='/checkout' element = {
+                <>
+                  <Navbar/>
+                  <Checkout/>
+                </>
+            }/> 
+             <Route path='/' element = {
+                <>
+                  <Navbar/>
+                  <Home/>
+                </>
+
+            
+            }/> 
+             <Route path='/Login' element = {
+                <>
+                  <Login/>
+                </>
+             }/> 
+             <Route path='/Register' element = {
+                
+                  <Register/>
+                
+             }/> 
+             <Route path='/Dashboard' element = {
+                <>
+                  <Dashboard/>
+                </>
+             }/>  
+            
+            </Routes>
+             
+            
+          
            
 
 
         </div>
     
 
-        // <BrowserRouter>
-        //   <Routes>
-        //     <div className="App">
-
-              
-        //         <Route path  = "/checkout" element = {<Navbar/>} />
-                 
-               
-        //         <Route path = "/login">
-        //           <h1>login page</h1>
-        //         </Route>
-        //         <Route path = "/">
-        //           <h1>Home page</h1>
-
-        //         </Route>
-              
-              
-              
-              
-        //     </div>
-        //   </Routes>
-        // </BrowserRouter>
-    
-    
   );
 }
 
